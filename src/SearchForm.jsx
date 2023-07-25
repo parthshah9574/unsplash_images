@@ -1,11 +1,13 @@
 import React from "react";
+import {useGlobalContext} from "./context";
 
 const SearchForm = () => {
+    const {setSearchWord} = useGlobalContext();
     const handleSubmit = (e) => {
         e.preventDefault();
         const searchValue = e.target.elements.search.value;
         if (!searchValue) return;
-        console.log(searchValue);
+        setSearchWord(searchValue);
     };
 
     return (
@@ -16,7 +18,7 @@ const SearchForm = () => {
                     type="text"
                     name="search"
                     className="form-input search-input"
-                    placeholder="cat"
+                    placeholder="Honey"
                 />
                 <button type="submit" className="btn">
                     Search
