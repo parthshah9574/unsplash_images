@@ -6,7 +6,9 @@ import {useGlobalContext} from "./context";
 /* const url = `https://api.unsplash.com/search/photos?client_id=${
     import.meta.env.VITE_API_KEY
 }`; */
-const url = `https://api.unsplash.com/search/photos?client_id=k68FoAqOxCs5x77BqC-iIEGDSUtJ3KF44aMx4N0No8w`;
+const url = `https://api.unsplash.com/search/photos?client_id=${
+    import.meta.env.VITE_API_KEY
+}`;
 
 const Gallery = () => {
     const {searchWord} = useGlobalContext();
